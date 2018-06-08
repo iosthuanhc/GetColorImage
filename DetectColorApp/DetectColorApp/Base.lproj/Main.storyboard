@@ -687,7 +687,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="596" y="305" width="480" height="270"/>
+                        <rect key="contentRect" x="596" y="305" width="580" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
@@ -706,7 +706,7 @@
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="DetectColorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" focusRingType="none" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="599" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ITa-ID-Gkp">
@@ -718,19 +718,19 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="gtF-Xi-oLn"/>
                             </imageView>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="37" horizontalPageScroll="10" verticalLineScroll="37" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e10-zY-DQZ">
-                                <rect key="frame" x="255" y="0.0" width="225" height="270"/>
+                                <rect key="frame" x="255" y="0.0" width="244" height="270"/>
                                 <clipView key="contentView" id="CO0-qc-usK">
-                                    <rect key="frame" x="1" y="0.0" width="223" height="269"/>
+                                    <rect key="frame" x="1" y="0.0" width="242" height="269"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="35" rowSizeStyle="automatic" headerView="HL3-vs-Qfw" viewBased="YES" id="5hx-Dd-v0R">
-                                            <rect key="frame" x="0.0" y="0.0" width="223" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="242" height="246"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="" width="220" minWidth="10" maxWidth="3.4028234663852886e+38" id="oYd-eO-lLE">
+                                                <tableColumn identifier="" width="239" minWidth="10" maxWidth="3.4028234663852886e+38" id="oYd-eO-lLE">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -744,11 +744,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="Cell" id="z7x-gC-rVZ">
-                                                            <rect key="frame" x="1" y="1" width="220" height="35"/>
+                                                            <rect key="frame" x="1" y="1" width="239" height="35"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nj8-f0-Dea">
-                                                                    <rect key="frame" x="47" y="9" width="165" height="17"/>
+                                                                    <rect key="frame" x="47" y="9" width="184" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="E0a-kf-9sG">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -796,7 +796,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="HL3-vs-Qfw">
-                                    <rect key="frame" x="0.0" y="0.0" width="223" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="242" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -810,28 +810,136 @@
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fku-kW-AlZ">
+                                <rect key="frame" x="499" y="0.0" width="100" height="270"/>
+                                <subviews>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="fJo-nN-NnH">
+                                        <rect key="frame" x="0.0" y="236" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell1_Action:" target="5gI-5U-AMq" id="j7J-nB-wbh"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gpW-OU-Mqf">
+                                        <rect key="frame" x="0.0" y="203" width="100" height="33"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell2_Action:" target="5gI-5U-AMq" id="9Qd-UL-pjj"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="c5N-Vj-l06">
+                                        <rect key="frame" x="0.0" y="169" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell3_Action:" target="5gI-5U-AMq" id="sIk-6t-TBt"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="iGJ-8m-v9w">
+                                        <rect key="frame" x="0.0" y="135" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell4_Action:" target="5gI-5U-AMq" id="NiO-RJ-2ni"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="gE6-6t-7V9">
+                                        <rect key="frame" x="0.0" y="101" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell5_Action:" target="5gI-5U-AMq" id="92S-xt-oLP"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="0LH-iz-GPB">
+                                        <rect key="frame" x="0.0" y="68" width="100" height="33"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell6_Action:" target="5gI-5U-AMq" id="yGH-Na-7H0"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Ib6-LC-Stp">
+                                        <rect key="frame" x="0.0" y="34" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell7_Action:" target="5gI-5U-AMq" id="gld-2u-hEw"/>
+                                        </connections>
+                                    </colorWell>
+                                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="1WY-k7-5xQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
+                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="colorWell8_Action:" target="5gI-5U-AMq" id="eNf-4s-t90"/>
+                                        </connections>
+                                    </colorWell>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0LH-iz-GPB" secondAttribute="trailing" id="0W1-wh-zd7"/>
+                                    <constraint firstItem="c5N-Vj-l06" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="3pL-qp-5cO"/>
+                                    <constraint firstItem="gpW-OU-Mqf" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="5uQ-T1-Dyb"/>
+                                    <constraint firstItem="0LH-iz-GPB" firstAttribute="top" secondItem="gE6-6t-7V9" secondAttribute="bottom" id="9ZB-IN-a3F"/>
+                                    <constraint firstItem="iGJ-8m-v9w" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="Acv-9y-MZW"/>
+                                    <constraint firstItem="0LH-iz-GPB" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="BHM-Po-fdn"/>
+                                    <constraint firstAttribute="trailing" secondItem="1WY-k7-5xQ" secondAttribute="trailing" id="DzI-TU-tsl"/>
+                                    <constraint firstItem="1WY-k7-5xQ" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="Nxb-NS-f5F"/>
+                                    <constraint firstItem="Ib6-LC-Stp" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="QSk-WI-m7V"/>
+                                    <constraint firstItem="gE6-6t-7V9" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="VdP-js-MSE"/>
+                                    <constraint firstAttribute="trailing" secondItem="gE6-6t-7V9" secondAttribute="trailing" id="X1v-gV-SNa"/>
+                                    <constraint firstItem="fJo-nN-NnH" firstAttribute="top" secondItem="fku-kW-AlZ" secondAttribute="top" id="Xhj-8p-Cra"/>
+                                    <constraint firstItem="0LH-iz-GPB" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="YlV-GC-5fw"/>
+                                    <constraint firstItem="c5N-Vj-l06" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="bA7-FY-mie"/>
+                                    <constraint firstItem="fJo-nN-NnH" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="bLq-Wr-bbH"/>
+                                    <constraint firstAttribute="trailing" secondItem="iGJ-8m-v9w" secondAttribute="trailing" id="bmp-km-uWs"/>
+                                    <constraint firstItem="gpW-OU-Mqf" firstAttribute="top" secondItem="fJo-nN-NnH" secondAttribute="bottom" id="bw9-te-5J2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ib6-LC-Stp" secondAttribute="trailing" id="c9d-yv-pHI"/>
+                                    <constraint firstAttribute="bottom" secondItem="1WY-k7-5xQ" secondAttribute="bottom" id="dZ0-ze-gQD"/>
+                                    <constraint firstItem="gpW-OU-Mqf" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="hPC-EK-u6u"/>
+                                    <constraint firstItem="iGJ-8m-v9w" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="j3n-Kr-IfM"/>
+                                    <constraint firstItem="Ib6-LC-Stp" firstAttribute="top" secondItem="0LH-iz-GPB" secondAttribute="bottom" id="joV-nj-Qh6"/>
+                                    <constraint firstItem="gE6-6t-7V9" firstAttribute="top" secondItem="iGJ-8m-v9w" secondAttribute="bottom" id="lA0-Iu-Re7"/>
+                                    <constraint firstAttribute="width" constant="100" id="mY7-Qb-yK7"/>
+                                    <constraint firstItem="Ib6-LC-Stp" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="mg5-qv-z9M"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5N-Vj-l06" secondAttribute="trailing" id="nb6-TB-x7a"/>
+                                    <constraint firstItem="1WY-k7-5xQ" firstAttribute="top" secondItem="Ib6-LC-Stp" secondAttribute="bottom" id="pfD-eh-oyp"/>
+                                    <constraint firstItem="gE6-6t-7V9" firstAttribute="leading" secondItem="fku-kW-AlZ" secondAttribute="leading" id="reT-zk-0cc"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpW-OU-Mqf" secondAttribute="trailing" id="sg4-RW-EXV"/>
+                                    <constraint firstItem="1WY-k7-5xQ" firstAttribute="height" secondItem="fJo-nN-NnH" secondAttribute="height" id="teE-4G-Nmb"/>
+                                    <constraint firstAttribute="trailing" secondItem="fJo-nN-NnH" secondAttribute="trailing" id="vvl-sb-Epj"/>
+                                    <constraint firstItem="iGJ-8m-v9w" firstAttribute="top" secondItem="c5N-Vj-l06" secondAttribute="bottom" id="xNd-CI-VBd"/>
+                                    <constraint firstItem="c5N-Vj-l06" firstAttribute="top" secondItem="gpW-OU-Mqf" secondAttribute="bottom" id="yOh-Mf-LvO"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ITa-ID-Gkp" firstAttribute="top" secondItem="u2D-HI-0bo" secondAttribute="bottom" constant="10" id="5AH-Yj-ayf"/>
                             <constraint firstItem="u2D-HI-0bo" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ERx-hH-rdd" secondAttribute="leading" id="HHk-Xy-yyZ"/>
                             <constraint firstItem="e10-zY-DQZ" firstAttribute="leading" secondItem="ITa-ID-Gkp" secondAttribute="trailing" constant="10" id="LBP-ad-o2Y"/>
+                            <constraint firstItem="fku-kW-AlZ" firstAttribute="leading" secondItem="e10-zY-DQZ" secondAttribute="trailing" id="NoO-1S-dut"/>
                             <constraint firstAttribute="bottom" secondItem="ITa-ID-Gkp" secondAttribute="bottom" constant="20" id="RVO-w5-geE"/>
+                            <constraint firstAttribute="bottom" secondItem="fku-kW-AlZ" secondAttribute="bottom" id="Sru-Ru-DFu"/>
                             <constraint firstAttribute="bottom" secondItem="e10-zY-DQZ" secondAttribute="bottom" id="Swa-8w-izd"/>
                             <constraint firstItem="e10-zY-DQZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="u2D-HI-0bo" secondAttribute="trailing" id="Vvs-c0-l8j"/>
                             <constraint firstItem="e10-zY-DQZ" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="bgx-Ox-ehb"/>
-                            <constraint firstAttribute="trailing" secondItem="e10-zY-DQZ" secondAttribute="trailing" id="fFZ-Ja-H4p"/>
+                            <constraint firstAttribute="trailing" secondItem="fku-kW-AlZ" secondAttribute="trailing" id="lUQ-lL-z4i"/>
                             <constraint firstItem="ITa-ID-Gkp" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="20" id="lpO-y0-Iqs"/>
+                            <constraint firstItem="fku-kW-AlZ" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="tg6-kB-nP6"/>
                             <constraint firstItem="u2D-HI-0bo" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="10" id="thr-03-Hz5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="fku-kW-AlZ" id="97C-04-MAm"/>
+                        <outlet property="colorWell1" destination="fJo-nN-NnH" id="IQX-fm-JMt"/>
+                        <outlet property="colorWell2" destination="gpW-OU-Mqf" id="Dcy-jS-oMV"/>
+                        <outlet property="colorWell3" destination="c5N-Vj-l06" id="W1f-Fy-WiF"/>
+                        <outlet property="colorWell4" destination="iGJ-8m-v9w" id="kDg-mI-Uic"/>
+                        <outlet property="colorWell5" destination="gE6-6t-7V9" id="OPV-Al-4I8"/>
+                        <outlet property="colorWell6" destination="0LH-iz-GPB" id="EZI-UJ-9xg"/>
+                        <outlet property="colorWell7" destination="Ib6-LC-Stp" id="2EP-kh-piV"/>
+                        <outlet property="colorWell8" destination="1WY-k7-5xQ" id="Ft0-rD-PYx"/>
                         <outlet property="imageView" destination="ITa-ID-Gkp" id="5uV-az-d4h"/>
                         <outlet property="tableView" destination="5hx-Dd-v0R" id="jIX-or-Y9z"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="723"/>
         </scene>
     </scenes>
 </document>

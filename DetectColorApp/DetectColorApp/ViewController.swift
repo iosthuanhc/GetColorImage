@@ -12,7 +12,19 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var colorView: NSView!
+    @IBOutlet weak var colorWell1: NSColorWell!
+    @IBOutlet weak var colorWell2: NSColorWell!
+    @IBOutlet weak var colorWell3: NSColorWell!
+    @IBOutlet weak var colorWell4: NSColorWell!
+    @IBOutlet weak var colorWell5: NSColorWell!
+    @IBOutlet weak var colorWell6: NSColorWell!
+    @IBOutlet weak var colorWell7: NSColorWell!
+    @IBOutlet weak var colorWell8: NSColorWell!
+    
     var colorItems: [NSColor]?
+    var pixDatas = [Pixel]()
+    var pixDataSplits = [[Pixel]]()
     
     private var currentImageUrl: URL? {
         didSet {
@@ -35,14 +47,91 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func colorWell1_Action(_ sender: NSColorWell) {
+        let pxs = getPixelsWithColor(color: sender.color)
+        if pxs.count > 0 {
+            
+        }
+    }
+    
+    @IBAction func colorWell2_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell3_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell4_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell5_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell6_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell7_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    @IBAction func colorWell8_Action(_ sender: NSColorWell) {
+        
+    }
+    
+    func getPixelsWithColor(color: NSColor) -> [Pixel] {
+        var pixels = [Pixel]()
+        for item in pixDatas {
+            if item.r == Float(color.redComponent), item.g == Float(color.greenComponent), item.b == Float(color.blueComponent) {
+                pixels.append(item)
+            }
+        }
+        return pixels
+    }
+    
     func updateUIWithImageUrl(url: URL) {
         colorItems = [NSColor]()
         imageView.image = NSImage(byReferencing: url)
-        let pixData = imageView.image?.pixelData()
-        pixData?.forEach({ (px) in
-            colorItems?.append(px.color)
-        })
+        pixDatas = (imageView.image?.pixelData())!
+        let index = pixDatas.count / 8
+        pixDataSplits = pixDatas.splitArray(into: index)
+        for item in pixDataSplits {
+            colorItems?.append(item[item.count - 1].color)
+        }
+        fillClolorCell()
         tableView.reloadData()
+    }
+    
+    func fillClolorCell() {
+        colorWell1.color = colorItems![0]
+        colorWell2.color = colorItems![1]
+        colorWell3.color = colorItems![2]
+        colorWell4.color = colorItems![3]
+        colorWell5.color = colorItems![4]
+        colorWell6.color = colorItems![5]
+        colorWell7.color = colorItems![6]
+        colorWell8.color = colorItems![7]
+        /*
+        colorView.subviews.forEach({ $0.removeFromSuperview() })
+        var y = 0
+        for item in 0..<(colorItems?.count ?? 0) {
+            let color = NSColorWell(frame: CGRect(x: 0, y: y, width: 100, height: 28))
+            color.color = colorItems![item]
+            color.tag = item
+            color.addObserver(self, forKeyPath: "\(color.tag)", options: .new, context: nil)
+            colorView.addSubview(color)
+            y = y + Int(color.frame.size.height) + 5
+        }
+ */
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "color" {
+            
+        }
     }
     
     @IBAction func getImage(_ sender: Any) {
@@ -53,12 +142,10 @@ class ViewController: NSViewController {
         let panel = NSOpenPanel()
         panel.allowedFileTypes = ["png","jpg","jpeg","tif","tiff","psd","pdf"]
         panel.runModal()
-        
         if let url = panel.url {
             self.currentImageUrl = url
         }
     }
-
 }
 
 extension ViewController: NSTableViewDataSource {
@@ -138,4 +225,12 @@ struct Pixel {
         return "RGBA(\(r), \(g), \(b), \(a))"
     }
     
+}
+
+extension Array {
+    func splitArray(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
 }
